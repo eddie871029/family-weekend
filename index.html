@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#f6efe4">
+<title>週末親子散步計畫｜10/17–10/18</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6efe4; --paper:#fffaf2; --ink:#2b2420; --muted:#7a6c62; --line:#e6d9c6;
+  --sun:#e8833a; --leaf:#4f8a5b; --sky:#3f7cac; --berry:#b8475a; --sand:#efe2cc;
+  --shadow:0 1px 0 rgba(43,36,32,.04), 0 6px 18px -10px rgba(43,36,32,.25);
+}
+@media (prefers-color-scheme: dark){
+  :root{--bg:#1d1916;--paper:#26211d;--ink:#f1e9df;--muted:#b3a597;--line:#3a322b;--sand:#332b24;
+    --sun:#f0a065;--leaf:#7fbf8b;--sky:#7fb0d8;--berry:#e0808f;--shadow:none}
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans TC",system-ui,sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased}
+.wrap{max-width:860px;margin:0 auto;padding:0 16px 64px}
+header{padding:40px 0 20px}
+.eyebrow{font-size:13px;letter-spacing:.18em;color:var(--sun);font-weight:700}
+h1{font-family:"Noto Serif TC",serif;font-weight:900;font-size:clamp(30px,7vw,46px);line-height:1.2;margin:6px 0 10px}
+.sub{color:var(--muted);margin:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chip{background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:4px 12px;font-size:14px}
+.weather{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:22px 0 8px}
+.wday{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:14px 16px;box-shadow:var(--shadow)}
+.wday b{font-size:15px}.wday .t{font-size:26px;font-weight:900;color:var(--sun)}
+.wday small{color:var(--muted);display:block}
+.note{font-size:14px;color:var(--muted);margin:6px 0 0}
+section{margin-top:44px}
+h2{font-family:"Noto Serif TC",serif;font-size:24px;margin:0 0 4px;display:flex;align-items:center;gap:10px}
+h2 .n{font-family:"Noto Sans TC";font-size:13px;font-weight:700;color:#fff;background:var(--sun);border-radius:8px;padding:1px 8px}
+.lead{color:var(--muted);margin:0 0 16px;font-size:15px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:16px 18px;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.card h3{margin:0 0 4px;font-size:18px}
+.card p{margin:4px 0;font-size:15px}
+.meta{font-size:13px;color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 2px}
+.tag{font-size:12px;border-radius:6px;padding:1px 8px;background:var(--sand);color:var(--ink)}
+.tag.g{background:color-mix(in srgb,var(--leaf) 18%,transparent);color:var(--leaf)}
+.tag.b{background:color-mix(in srgb,var(--sky) 18%,transparent);color:var(--sky)}
+.tag.r{background:color-mix(in srgb,var(--berry) 16%,transparent);color:var(--berry)}
+.card a{color:var(--sky);font-size:14px;margin-top:auto;padding-top:8px;text-decoration:none}
+.card a:hover{text-decoration:underline}
+.plan{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:6px 20px;box-shadow:var(--shadow)}
+.day{padding:14px 0;border-bottom:1px dashed var(--line)}.day:last-child{border:0}
+.day h3{margin:0 0 6px;font-size:17px;color:var(--leaf)}
+.slot{display:grid;grid-template-columns:76px 1fr;gap:10px;padding:4px 0;font-size:15px}
+.slot time{font-weight:700;color:var(--sun);font-variant-numeric:tabular-nums}
+.tips{background:color-mix(in srgb,var(--sun) 10%,var(--paper));border-left:4px solid var(--sun);border-radius:12px;padding:12px 16px;margin-top:14px}
+.tips ul{margin:4px 0;padding-left:20px}.tips li{margin:4px 0;font-size:15px}
+.next{border:2px dashed var(--line);border-radius:18px;padding:14px 18px}
+footer{margin-top:52px;font-size:13px;color:var(--muted)}
+footer ul{padding-left:18px}footer a{color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow">WEEKEND · 竹北出發</div>
+  <h1>10/17（六）– 10/18（日）<br>週末親子計畫</h1>
+  <p class="sub">晴熱的秋老虎週末：早上公園放電、午後室內休息、傍晚去青草湖看燈光與煙火。</p>
+  <div class="chips">
+    <span class="chip">👦 哥哥 4 歲</span><span class="chip">👶 弟弟 3 歲</span>
+    <span class="chip">📍 竹北 / 新竹市</span><span class="chip">🗓 第 1 期 · 2026-10-15 編</span>
+  </div>
+  <div class="weather">
+    <div class="wday"><b>週六 10/17</b><div class="t">24–32°C</div><small>晴熱，戶外避開 11–15 點</small></div>
+    <div class="wday"><b>週日 10/18</b><div class="t">24–31°C</div><small>晴熱，記得防曬與補水</small></div>
+  </div>
+  <p class="note">天氣為週四晚間預報，出門前請再看一次中央氣象署。</p>
+</header>
+
+<section>
+  <h2><span class="n">私房</span>本週推薦行程</h2>
+  <p class="lead">以兩兄弟的體力和午睡為主軸排的版本，可直接照走。</p>
+  <div class="plan">
+    <div class="day">
+      <h3>週六｜滑步車 ＋ 青草湖秋焰祭</h3>
+      <div class="slot"><time>08:00</time><span>竹北興隆公園：200 公尺滑步車道，趁涼快騎個過癮</span></div>
+      <div class="slot"><time>10:30</time><span>回家／室內吃午餐、午睡，避開最熱時段</span></div>
+      <div class="slot"><time>16:00</time><span>搭市府免費接駁（新竹火車站後站發車）到青草湖，先逛 14:00 起的舒湖市集</span></div>
+      <div class="slot"><time>17:00</time><span>湖畔燈光秀（每 30 分鐘一場），跟巨型蠟筆小新拍照</span></div>
+      <div class="slot"><time>19:20</time><span>300 秒水岸煙火，看完就撤，趕在睡前回家</span></div>
+    </div>
+    <div class="day">
+      <h3>週日｜超人力霸王萬聖節 ＋ 新竹公園</h3>
+      <div class="slot"><time>09:00</time><span>新竹州廳「宇宙集結令」萬聖節展：超人力霸王氣偶與互動牆，完成拍照任務可兌換扭蛋</span></div>
+      <div class="slot"><time>10:30</time><span>步行或短程開車到新竹公園一帶，草地跑跑、看看動物園</span></div>
+      <div class="slot"><time>午後</time><span>回家休息；體力還夠的話，傍晚再去社區公園踢球</span></div>
+    </div>
+  </div>
+  <div class="tips">
+    <b>爸爸小提醒</b>
+    <ul>
+      <li>煙火聲音大，3 歲的弟弟可能會怕，帶兒童耳罩或站遠一點的位置比較安心。</li>
+      <li>青草湖週末人潮多、停車難，搭接駁車最省事；推車或背巾擇一帶。</li>
+      <li>天氣還很熱，滑步車記得戴安全帽，水壺至少一人一瓶。</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2><span class="n">1</span>公園放電</h2>
+  <p class="lead">溜滑梯、滑步車、球類、跑步，挑 3–5 歲玩得動的。</p>
+  <div class="grid">
+    <div class="card"><h3>竹北興隆公園</h3><p>200 公尺的滑步車道是最大亮點，適合兄弟倆一起騎。攀爬網偏大孩子，弟弟要陪同。</p>
+      <div class="tags"><span class="tag g">滑步車</span><span class="tag">竹北</span></div></div>
+    <div class="card"><h3>節氣公園・星河之夢</h3><p>2.4 公尺風車塔溜滑梯，另有沙坑和鞦韆，2 歲以上就能玩，弟弟友善。</p>
+      <div class="tags"><span class="tag g">溜滑梯</span><span class="tag">沙坑</span><span class="tag">竹北</span></div></div>
+    <div class="card"><h3>公兒 30・蘑菇城堡</h3><p>兩座巨型蘑菇溜滑梯，造型很討小小孩喜歡，拍照也好看。</p>
+      <div class="tags"><span class="tag g">溜滑梯</span><span class="tag">竹北</span></div></div>
+    <div class="card"><h3>港南運河公園</h3><p>擬真滑步車場地附紅綠燈，順便教交通規則；另有彈跳平台和攀爬架。</p>
+      <div class="tags"><span class="tag g">滑步車</span><span class="tag b">寓教於樂</span><span class="tag">香山</span></div></div>
+    <div class="card"><h3>香山青青草原</h3><p>四道磨石子溜滑梯加大片草皮，踢球、跑步、野餐都適合，建議傍晚去。</p>
+      <div class="tags"><span class="tag g">溜滑梯</span><span class="tag">球類</span><span class="tag">跑步</span></div></div>
+    <div class="card"><h3>湖口公五公園</h3><p>裝甲戰車造型炮管溜滑梯，滑步車有直線和 S 彎道，哥哥會很愛。</p>
+      <div class="tags"><span class="tag g">滑步車</span><span class="tag g">溜滑梯</span><span class="tag">湖口</span></div></div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="n">2</span>最新展覽・活動</h2>
+  <p class="lead">本週末進行中、適合小小孩的。時間以官方公告為準。</p>
+  <div class="grid">
+    <div class="card"><h3>2026 青草湖秋焰祭</h3>
+      <p class="meta">即日起–10/26｜新竹市青草湖｜免費</p>
+      <p>首度和蠟筆小新合作，湖面有巨型小新氣偶、9 個拍照點。每晚 17:00 起燈光秀；<b>10/17、18 晚上 19:20 有 300 秒煙火</b>；週末 14:00 起有市集，10/18 另有新竹市立交響樂團動漫音樂會。</p>
+      <div class="tags"><span class="tag r">本週主打</span><span class="tag">煙火</span><span class="tag">免費接駁</span></div>
+      <a href="https://travel.ettoday.net/article/3253853.htm" target="_blank" rel="noopener">活動詳情 →</a></div>
+    <div class="card"><h3>新竹市萬聖節「宇宙集結令」</h3>
+      <p class="meta">10/16–10/31｜新竹州廳｜免費</p>
+      <p>超人力霸王主題展，有大型氣偶、互動牆與拍照任務，完成可換限量扭蛋。10/31 有萬聖節變裝遊行。</p>
+      <div class="tags"><span class="tag r">男孩最愛</span><span class="tag">拍照任務</span></div>
+      <a href="https://wekengo.tw/event/8ZMPR0/chao-ren-li-ba-wang-jiang-lin-2026-zhu-shi-wan-sheng-jie-yu" target="_blank" rel="noopener">活動詳情 →</a></div>
+    <div class="card"><h3>2026 新竹縣新響藝術季</h3>
+      <p class="meta">至 10/31｜竹北・縣文化局園區｜免費</p>
+      <p>就在竹北，週末常有親子場演出，適合當作午後的室內備案。</p>
+      <div class="tags"><span class="tag">竹北</span><span class="tag b">室內備案</span></div>
+      <a href="https://wekengo.tw/event/G5ZJUc/2026-xin-zhu-xian-xin-xiang-yi-shu-ji" target="_blank" rel="noopener">活動詳情 →</a></div>
+    <div class="card"><h3>湖灣好時光・內灣小旅行</h3>
+      <p class="meta">至 10/18｜內灣車站</p>
+      <p>本週最後兩天。小孩愛坐火車的話，可搭內灣支線一趟當作行程本身。</p>
+      <div class="tags"><span class="tag">搭火車</span><span class="tag">最後機會</span></div>
+      <a href="https://wekengo.tw/event/pRFUkl/hu-wan-hao-guang-nei-wan-xiao-lv-xing" target="_blank" rel="noopener">活動詳情 →</a></div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="n">3</span>親子住宿</h2>
+  <p class="lead">一小時車程內、雨天也能玩的選擇。價格浮動，請以官網為準。</p>
+  <div class="grid">
+    <div class="card"><h3>新竹煙波湖濱館</h3><p>約 500 坪室內樂園（球池、跳跳床、迷宮）還有 0–3 歲專區，弟弟也玩得到；就在青草湖旁，可搭配秋焰祭。</p>
+      <div class="tags"><span class="tag g">室內樂園</span><span class="tag">泳池</span><span class="tag">新竹市</span></div></div>
+    <div class="card"><h3>馥藝金鬱金香酒店</h3><p>部分親子房附溜滑梯，B1 童樂屋加泳池，旁邊就是大型運動公園，可以騎滑步車。</p>
+      <div class="tags"><span class="tag g">房內溜滑梯</span><span class="tag">竹南</span></div></div>
+    <div class="card"><h3>六福莊</h3><p>住在動物園裡，可參加生態導覽，適合留給生日或紀念日這種特別日子。</p>
+      <div class="tags"><span class="tag r">特別日子</span><span class="tag">關西</span></div></div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="n">4</span>季節景點・秋</h2>
+  <p class="lead">東北季風一來，就是新竹最有味道的季節。</p>
+  <div class="grid">
+    <div class="card"><h3>新埔曬柿餅</h3><p>秋風起、柿子熟，柿餅季陸續開曬。一片橘色的曬場很好拍照，味衛佳可體驗捏柿餅、柿染，小孩動手最開心。建議先打電話確認開曬狀況。</p>
+      <div class="tags"><span class="tag r">季節限定</span><span class="tag">手作</span><span class="tag">新埔</span></div>
+      <a href="https://supertaste.tvbs.com.tw/travel/305435" target="_blank" rel="noopener">柿餅園介紹 →</a></div>
+    <div class="card"><h3>南寮漁港</h3><p>秋天風大，最適合放風箏；旅遊服務中心有室內雙層旋轉溜滑梯（偏 5 歲以上）。下週 Red Bull 風箏衝浪賽就在這裡。</p>
+      <div class="tags"><span class="tag">放風箏</span><span class="tag">海邊</span></div></div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="n">下週</span>先看起來</h2>
+  <div class="next">
+    <p><b>10/24–25 Red Bull King of the Air 台灣資格賽（南寮漁港）</b>：正式比賽 10/21–26 看風況進行，週末有小騎士探險、表演和市集。<br>
+    <b>10/24–26 青草湖秋焰祭最後一波煙火</b>，10/25 有蠟筆小新見面會。<br>
+    <b>10/31 秋遊星夜季（新竹縣政府前廣場，14:00–21:00）</b>：香蕉哥哥、番茄姐姐、YOYOMAN 都會到場，還有 50 輛以上餐車。</p>
+  </div>
+</section>
+
+<footer>
+  <p>資料來源（2026-10-15 查詢）：</p>
+  <ul>
+    <li><a href="https://wekengo.tw/city/hsinchu/weekend" target="_blank" rel="noopener">新竹週末活動 10/17–10/18（wekengo）</a></li>
+    <li><a href="https://travel.ettoday.net/article/3253853.htm" target="_blank" rel="noopener">ETtoday 旅遊：青草湖秋焰祭</a></li>
+    <li><a href="https://www.chinatimes.com/realtimenews/20261008003272-260421" target="_blank" rel="noopener">中時：2026 秋遊星夜季</a></li>
+    <li><a href="https://uptogo.com.tw/親子/新竹特色公園/" target="_blank" rel="noopener">新竹特色公園整理（uptogo）</a></li>
+    <li><a href="https://www.coolprice.com.tw/guides/taoyuan-hsinchu-miaoli-family-hotels" target="_blank" rel="noopener">桃竹苗親子飯店推薦（酷派旅遊）</a></li>
+    <li><a href="https://supertaste.tvbs.com.tw/travel/305435" target="_blank" rel="noopener">食尚玩家：新埔柿餅</a></li>
+    <li><a href="https://weather.yam.com/%E7%AB%B9%E5%8C%97%E5%B8%82/%E6%96%B0%E7%AB%B9%E7%B8%A3" target="_blank" rel="noopener">竹北天氣預報</a></li>
+  </ul>
+  <p>每週五 09:00 自動更新。</p>
+</footer>
+</div>
+</body>
+</html>
