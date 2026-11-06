@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#000000">
+<title>This Weekend｜11/7–11/8</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#000; --panel:#111113; --panel2:#1d1d1f; --ink:#f5f5f7; --muted:#86868b; --line:#2a2a2d;
+  --blue:#2997ff; --g1:#ff9a3c; --g2:#ff4f8b; --g3:#a35cff; --g4:#2997ff; --green:#30d158;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Inter","PingFang TC","Noto Sans TC",sans-serif;-webkit-font-smoothing:antialiased;line-height:1.5;letter-spacing:-.01em}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+.slide{padding:clamp(72px,14vh,140px) 0;border-bottom:1px solid #111}
+.kicker{font-size:clamp(15px,2vw,21px);font-weight:700;color:var(--muted);margin:0 0 10px}
+.mega{font-size:clamp(52px,12vw,124px);font-weight:800;line-height:1.02;letter-spacing:-.045em;margin:0}
+.big{font-size:clamp(36px,7vw,72px);font-weight:800;line-height:1.08;letter-spacing:-.035em;margin:0 0 18px}
+.grad{background:linear-gradient(90deg,var(--g1),var(--g2) 45%,var(--g3) 75%,var(--g4));-webkit-background-clip:text;background-clip:text;color:transparent}
+.grad2{background:linear-gradient(90deg,#30d158,#2997ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lede{font-size:clamp(19px,2.6vw,28px);font-weight:600;color:var(--muted);max-width:760px;margin:22px 0 0;line-height:1.35}
+.lede b{color:var(--ink)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:56px}
+.stat{background:var(--panel);border-radius:24px;padding:26px 26px 24px}
+.stat .lbl{color:var(--muted);font-size:15px;font-weight:600}
+.stat .num{font-size:clamp(38px,6vw,56px);font-weight:800;letter-spacing:-.03em;line-height:1.1;margin:6px 0 2px}
+.stat .sub{color:var(--muted);font-size:14px}
+.foot-note{color:#6e6e73;font-size:13px;margin-top:14px}
+
+/* timeline */
+.days{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;margin-top:40px}
+.day{background:var(--panel);border-radius:28px;padding:30px}
+.day h3{font-size:28px;font-weight:800;margin:0 0 4px;letter-spacing:-.02em}
+.day .theme{color:var(--muted);font-weight:600;margin:0 0 18px}
+.row{display:grid;grid-template-columns:70px 1fr;gap:12px;padding:12px 0;border-top:1px solid var(--line);font-size:16px}
+.row time{font-weight:700;color:var(--blue);font-variant-numeric:tabular-nums}
+.tips{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:18px}
+.tip{background:var(--panel);border-radius:22px;padding:22px 24px;color:var(--muted);font-size:16px}
+.tip b{display:block;color:var(--ink);font-size:18px;margin-bottom:4px}
+
+/* region switch */
+.seg{display:inline-flex;background:var(--panel2);border-radius:999px;padding:4px;gap:2px;margin:34px 0 8px;position:sticky;top:12px;z-index:5;box-shadow:0 8px 30px rgba(0,0,0,.6)}
+.seg label{padding:9px clamp(14px,3vw,26px);border-radius:999px;font-weight:700;font-size:16px;color:var(--muted);cursor:pointer;transition:.2s}
+input[name=r]{position:absolute;opacity:0;pointer-events:none}
+#r1:checked~.seg label[for=r1],#r2:checked~.seg label[for=r2],#r3:checked~.seg label[for=r3],#r4:checked~.seg label[for=r4]{background:var(--ink);color:#000}
+.region{display:none}
+#r1:checked~#p1,#r2:checked~#p2,#r3:checked~#p3,#r4:checked~#p4{display:block;animation:fade .35s ease}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.cat{margin-top:46px}
+.cat h4{font-size:clamp(24px,3.4vw,34px);font-weight:800;letter-spacing:-.025em;margin:0 0 16px}
+.cat h4 span{color:var(--muted);font-weight:700}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.card{background:var(--panel);border-radius:24px;padding:24px;display:flex;flex-direction:column;transition:transform .25s}
+.card:hover{transform:scale(1.015)}
+.card .when{font-size:13px;font-weight:700;letter-spacing:.02em;color:var(--g1);text-transform:uppercase}
+.card h5{font-size:22px;font-weight:800;margin:6px 0 8px;letter-spacing:-.02em;line-height:1.25}
+.card p{margin:0;color:var(--muted);font-size:15.5px}
+.card p b{color:var(--ink);font-weight:600}
+.card .meta{margin-top:12px;font-size:13px;color:#6e6e73}
+.card a{margin-top:auto;padding-top:14px;color:var(--blue);text-decoration:none;font-size:15px;font-weight:600}
+.card a:hover{text-decoration:underline}
+.card.hero{background:linear-gradient(145deg,#1d1d1f,#2a1530 60%,#0f1d33)}
+.badge{display:inline-block;font-size:12px;font-weight:700;border:1px solid var(--line);color:var(--muted);border-radius:999px;padding:2px 10px;margin:10px 6px 0 0}
+.badge.hot{border-color:transparent;background:var(--ink);color:#000}
+
+/* next */
+.next{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:40px}
+.next .card .when{color:var(--green)}
+footer{padding:60px 0 80px;color:#6e6e73;font-size:13px}
+footer a{color:#86868b}
+footer ul{padding-left:18px;columns:2;column-gap:32px}
+@media(max-width:600px){footer ul{columns:1}.row{grid-template-columns:62px 1fr}}
+</style>
+</head>
+<body>
+
+<section class="slide">
+<div class="wrap">
+  <p class="kicker">11 月 7 日 – 11 月 8 日 · 第 4 期</p>
+  <h1 class="mega">This<br><span class="grad">Weekend.</span></h1>
+  <p class="lede">季風來了，該放風箏了。<b>週六去苗栗風箏節畫風箏、放風箏，週日在竹北逛新總圖、下午到關西看仙草花。</b>下週一起冷空氣更強，這是轉涼前最好出門的一個週末。</p>
+  <div class="stats">
+    <div class="stat"><div class="lbl">週六</div><div class="num">30°</div><div class="sub">竹苗高溫 28–30° · 低溫 21–25° · 多雲到晴，東北季風、桃園以北局部短暫雨</div></div>
+    <div class="stat"><div class="lbl">週日</div><div class="num">29°</div><div class="sub">北部高溫 26–29° · 低溫 21–25° · 西半部晴到多雲；入夜季風增強，桃園以北零星雨</div></div>
+    <div class="stat"><div class="lbl">哥哥</div><div class="num">4 歲</div><div class="sub">適合：彩繪風箏、闖關集章、繪本手作</div></div>
+    <div class="stat"><div class="lbl">弟弟</div><div class="num">3 歲</div><div class="sub">適合：草地追風箏、園遊車、圖書館繪本區</div></div>
+  </div>
+  <p class="foot-note">天氣依 11/6 媒體引述氣象署預報（未提供降雨機率）：週六東北季風影響，新竹以南多雲到晴；週日季風稍減弱、氣溫回升，晚起再增強。下週一晚到週三更強冷空氣，局部低溫可能 17°。出門前請再確認中央氣象署。</p>
+</div>
+</section>
+
+<section class="slide">
+<div class="wrap">
+  <p class="kicker">私房推薦</p>
+  <h2 class="big">有風的週末，<span class="grad">就去放風箏。</span></h2>
+  <div class="days">
+    <div class="day">
+      <h3>週六 11/7</h3><p class="theme">苗栗風箏節 × 新竹童樂會</p>
+      <div class="row"><time>08:30</time><span>開車南下苗栗市後龍溪河濱公園（約 40 分鐘），趁早停車或轉搭免費接駁（09:00 起）</span></div>
+      <div class="row"><time>10:00</time><span>風箏彩繪 DIY（10:00–16:00，限量，需標註主辦社群兌換），先讓兩兄弟畫自己的風箏</span></div>
+      <div class="row"><time>10:45</time><span>親子免費放飛體驗、搭親子園遊車；租風箏需押金，歸還退回</span></div>
+      <div class="row"><time>11:30</time><span>客家美食嘉年華吃午餐（10:00–20:30），200 元消費券可換限量紀念風箏</span></div>
+      <div class="row"><time>12:30</time><span>開車回竹北，兩兄弟車上午睡，到家繼續睡</span></div>
+      <div class="row"><time>15:30</time><span>新竹市孔廟廣場「新竹童樂會 皮卡歐嗨YO！」（免費，時段以官方公告為準），旁邊就是新竹公園</span></div>
+      <div class="row"><time>17:30</time><span>市區吃晚餐，早點回家洗澡</span></div>
+    </div>
+    <div class="day">
+      <h3>週日 11/8</h3><p class="theme">新總圖 × 關西仙草花</p>
+      <div class="row"><time>09:00</time><span>新竹縣立總圖書館試營運（竹北，09:00 開館，免費），兒童閱讀區讀繪本，趁人少先到</span></div>
+      <div class="row"><time>10:30</time><span>竹北農會「農遊趣」逛小農攤（時間以官方公告為準），買水果點心</span></div>
+      <div class="row"><time>11:30</time><span>回家午餐、午睡</span></div>
+      <div class="row"><time>14:30</time><span>開車到關西（約 30 分鐘）</span></div>
+      <div class="row"><time>15:00</time><span>關西仙草花文化節（南山大橋一帶，免費），看紫色仙草花田、逛市集、喝仙草</span></div>
+      <div class="row"><time>16:30</time><span>天黑前回程；晚上季風增強，北邊可能飄雨</span></div>
+    </div>
+  </div>
+  <div class="tips">
+    <div class="tip"><b>風箏節怎麼停</b>河濱停車位有限，週六 09:00–21:30、週日 09:00–18:00 有免費接駁。彩繪 DIY 限量，想畫的話早點到；河濱沒遮蔭，帽子要有帶子，風大會吹走。</div>
+    <div class="tip"><b>時間沒公布的別硬趕</b>新竹童樂會、竹北農遊趣、仙草花節的詳細時段來源都沒寫，出發前看一下官方粉專；臨時取消就改去新竹公園或總圖書館。</div>
+    <div class="tip"><b>下週要轉冷</b>週末白天還有 28–30°，但週一晚起冷空氣更強、局部低溫 17°。週末先把外套、長褲翻出來，週日晚上回家路上就可能用到。</div>
+  </div>
+</div>
+</section>
+
+<section class="slide">
+<div class="wrap">
+  <p class="kicker">分區推薦</p>
+  <h2 class="big">往哪走，<span class="grad2">都好玩。</span></h2>
+
+  <input type="radio" name="r" id="r1" checked>
+  <input type="radio" name="r" id="r2">
+  <input type="radio" name="r" id="r3">
+  <input type="radio" name="r" id="r4">
+  <div class="seg">
+    <label for="r1">新竹</label><label for="r2">桃園</label><label for="r3">台北</label><label for="r4">苗栗</label>
+  </div>
+
+  <!-- 新竹 -->
+  <div class="region" id="p1">
+    <div class="cat"><h4>活動・展覽 <span>Events</span></h4>
+      <div class="cards">
+        <div class="card hero"><div class="when">11/7 週六 · 免費</div><h5>2026 新竹童樂會「皮卡歐嗨YO！」</h5>
+          <p>新竹市孔廟廣場的戶外親子場，戲劇與表演為主；童樂會最終巡迴一路到 <b>11/14</b>，也會到大湳雅公園。演出時段以官方公告為準。</p>
+          <div><span class="badge hot">本週主打</span><span class="badge">新竹公園旁</span></div>
+          <a href="https://wekengo.tw/event/Le3tpH/2026-xin-zhu-tong-le-hui-pi-ka-ou-hai-yo" target="_blank" rel="noopener">了解更多 ›</a></div>
+        <div class="card"><div class="when">試營運至 11/15 · 免費</div><h5>新竹縣立總圖書館</h5>
+          <p>竹北自強三路新館試營運，週二至週日 09:00–21:00，有兒童閱讀區；館內親子劇場活動需另外報名。</p>
+          <div><span class="badge">新開館</span><span class="badge">雨天備案</span></div>
+          <a href="https://www.hclibraryopening.com.tw/%E8%A9%A6%E7%87%9F%E9%81%8B%E5%8F%8A%E9%96%8B%E9%A4%A8%E4%BB%8B%E7%B4%B9" target="_blank" rel="noopener">了解更多 ›</a></div>
+        <div class="card"><div class="when">11/7 – 11/8 · 免費</div><h5>2026 關西仙草花文化節</h5>
+          <p>關西鎮南山大橋一帶，仙草花田、市集、導覽與音樂表演。各時段以官方公告為準。</p>
+          <a href="https://wekengo.tw/event/Z4inMU/2026-guan-xi-xian-cao-hua-wen-hua-jie" target="_blank" rel="noopener">了解更多 ›</a></div>
+        <div class="card"><div class="when">11/7 週六 · 10:00–14:00</div><h5>橫山「發現星村」社會福利市集</h5>
+          <p>趣味闖關集章（限量 600 份闖關禮）、造型氣球、太鼓與烏克麗麗表演，13:30 抽腳踏車等獎品。</p>
+          <a href="https://n.yam.com/Article/20261104581036" target="_blank" rel="noopener">了解更多 ›</a></div>
+        <div class="card"><div class="when">至 11/22 · 週五六日</div><h5>六福村 星光票</h5>
+          <p>16:00 後入園星光票 499 元、13:00 後午後票 699 元（彙整資料）；票價以官方公告為準。</p>
+          <a href="https://www.leofoovillage.com.tw/Infos/News/onsitesales" target="_blank" rel="noopener">了解更多 ›</a></div>
+      </div></div>
+    <div class="cat"><h4>公園 <span>Parks</span></h4>
+      <div class="cards">
+        <div class="card"><div class="when">竹北 · 溜滑梯・樹林</div><h5>水圳森林公園</h5><p>高鐵特區的樹林公園，有兒童遊具與林間步道，樹蔭多，適合中午前後放電；常設景點。</p></div>
+        <div class="card"><div class="when">竹北 · 滑步車・跑步</div><h5>新瓦屋客家文化保存區</h5><p>大片草地加平坦步道，滑步車、丟球、跑跳都好；週日早上從總圖書館過去很近。常設景點。</p></div>
+        <div class="card"><div class="when">東區 · 步道</div><h5>十八尖山</h5><p>環山道路平緩，推車也能走，秋涼正適合散步；週六去孔廟童樂會可順遊。常設景點。</p></div>
+      </div></div>
+    <div class="cat"><h4>親子住宿 <span>Stay</span></h4>
+      <div class="cards">
+        <div class="card"><div class="when">新竹市 · 配青草湖光影節</div><h5>煙波大飯店湖濱館</h5><p>大型室內遊戲區，就在青草湖旁；11/7 起的青草湖光影藝術節晚上散步就到。</p></div>
+        <div class="card"><div class="when">關西 · 配仙草花節</div><h5>六福莊</h5><p>房間看得到動物；週日看完仙草花入住，或週六用星光票逛六福村。專案以官方公告為準。</p></div>
+        <div class="card"><div class="when">竹北 · 配新總圖</div><h5>新竹豐邑喜來登</h5><p>兒童遊戲區與泳池，離縣立總圖書館、新瓦屋都近，一個週末不用移車。</p></div>
+      </div></div>
+    <div class="cat"><h4>季節景點 <span>Season</span></h4>
+      <div class="cards">
+        <div class="card"><div class="when">秋季限定 · 新埔</div><h5>九降風曬柿餅</h5><p>東北季風穩定，柿餅進入曬製旺季，橘色柿子排滿曬場很好拍；出發前先電話確認柿餅園。</p>
+          <a href="https://supertaste.tvbs.com.tw/travel/305435" target="_blank" rel="noopener">了解更多 ›</a></div>
+        <div class="card"><div class="when">秋季 · 南寮</div><h5>南寮漁港放風箏</h5><p>上週提到的風這週來了，舊港島大草地帶風箏去放；小孩別靠近堤防。常設景點。</p></div>
+        <div class="card"><div class="when">11/7 – 11/22 · 夜間</div><h5>青草湖光影藝術節《湖・共生》</h5><p>青草湖畔的戶外光影作品，天黑後才好看；對弟弟偏晚，晚餐後去一小時就好。時間與費用以官方公告為準。</p>
+          <a href="https://wekengo.tw/event/sZl28j/qing-cao-hu-guang-ying-yi-shu-jie" target="_blank" rel="noopener">了解更多 ›</a></div>
+      </div></div>
+  </div>
+
+  <!-- 桃園 -->
+  <div class="region" id="p2">
+    <div class="cat"><h4>活動・展覽 <span>Events</span></h4>
+      <div class="cards">
+        <div class="card hero"><div class="when">11/7 週六 14:30 · 300–1,000 元</div><h5>《小王子歷險記》親子音樂會</h5>
+          <p>桃園交響管樂團，<b>桃園展演中心展演廳</b>，約 90 分鐘含中場休息，需購票、一人一券（OPENTIX）。適合親子一起看。</p>
+          <div><span class="badge hot">本週主打</span><span class="badge">需購票</span></div>
+          <a href="https://www.afmc.gov.tw/Activity_detail/acbbbbe8704142c2891d52667d85db99" target="_blank" rel="noopener">了解更多 ›</a></div>
+        <div class="card"><div class="when">至 11/30 · 09:30–17:00</div><h5>兒童美術館《一樣不一樣》</h5>
+          <p>中壢青埔桃園市兒童美術館，可動手玩的展覽；全票 100、優待 50，18 歲以下免費，週二休館。</p>
+          <a href="https://tmofa.tycg.gov.tw/ch/exhibitions/current-exhibitions/156" target="_blank" rel="noopener">了解更多 ›</a></div>
+        <div class="card"><div class="when">11/1 – 11/29</div><h5>兒童玩具圖書館市集</h5>
+          <p>八德大湳森林公園內，玩具與小吃攤；資料寫每日 10:00–16:30，費用與時間以官方公告為準。</p>
+          <a href="https://wekengo.tw/event/nOReqf/er-tong-wan-ju-tu-shu-guan-shi-ji" target="_blank" rel="noopener">了解更多 ›</a></div>
+        <div class="card"><div class="when">11 月指定週末 · 免費</div><h5>市立圖書館總館 桌遊體驗</h5>
+          <p>2F 桌遊區 13:00–16:00，13:10／14:10／15:10 各約 40 分鐘，現場領號，<b>建議 4 歲以上</b>；開放日期以官方公告為準。</p>
+          <a href="https://wekengo.tw/event/e3n16l/zong-guan-zhuo-you-ti-yan-2026-nian-11-yue-kai-fang-shi-jian" target="_blank" rel="noopener">了解更多 ›</a></div>
+        <div class="card"><div class="when">11/7 – 11/8、11/14 – 11/15</div><h5>小人國 雙 11 優惠</h5>
+          <p>彙整資料提到特定條件現場購票優惠，條件較細，請以官方公告為準；小人國設施對 3–4 歲很友善。</p>
+          <a href="https://www.wow.com.tw/tw/news/show.aspx?num=3512&page=1" target="_blank" rel="noopener">了解更多 ›</a></div>
+      </div></div>
+    <div class="cat"><h4>公園 <span>Parks</span></h4>
+      <div class="cards">
+        <div class="card"><div class="when">八德 · 跑步・遊具</div><h5>大湳森林公園</h5><p>大草坪、生態池與兒童遊戲場，順逛兒童玩具圖書館市集；常設景點。</p></div>
+        <div class="card"><div class="when">桃園區 · 溜滑梯</div><h5>大有梯田生態公園</h5><p>梯田造型的地形溜滑梯與攀爬設施，哥哥會玩很久；常設景點。</p></div>
+        <div class="card"><div class="when">桃園區 · 滑步車</div><h5>陽明運動公園</h5><p>環狀步道平坦、草地寬，兒童遊戲區也在裡面；離桃園展演中心不遠。常設景點。</p></div>
+      </div></div>
+    <div class="cat"><h4>親子住宿 <span>Stay</span></h4>
+      <div class="cards">
+        <div class="card"><div class="when">青埔 · 配兒童美術館</div><h5>和逸飯店桃園館</h5><p>親子主題房與遊戲室，到兒童美術館、青塘園都近。</p></div>
+        <div class="card"><div class="when">中壢 · 溫泉</div><h5>南方莊園</h5><p>溫泉加兒童戲水池與室內遊戲室，下週冷空氣報到，泡湯正好。</p></div>
+        <div class="card"><div class="when">大溪 · 配小人國</div><h5>笠復威斯汀度假酒店</h5><p>室內外泳池與兒童遊具，隔天接小人國雙 11 優惠或大溪木博館集章。</p></div>
+      </div></div>
+    <div class="cat"><h4>季節景點 <span>Season</span></h4>
+      <div class="cards">
+        <div class="card"><div class="when">季風季 · 觀音</div><h5>草漯沙丘</h5><p>東北季風吹出的海岸沙丘，秋冬最有樣子；沙地好玩但風沙大，帶帽子與護目。常設景點。</p></div>
+        <div class="card"><div class="when">至 11/18 · 大溪</div><h5>木博館十週年集章</h5><p>天涼了適合老街散步，跟著「木博喵」集章走大溪街區；細節以官方公告為準。</p>
+          <a href="https://www.tyart-tour.tw/activity/stamp/cafr" target="_blank" rel="noopener">了解更多 ›</a></div>
+        <div class="card"><div class="when">秋季 · 復興</div><h5>角板山公園</h5><p>山上比平地涼，步道平緩、可眺望大漢溪；常設景點，山路容易暈車。</p></div>
+      </div></div>
+  </div>
+
+  <!-- 台北 -->
+  <div class="region" id="p3">
+    <div class="cat"><h4>活動・展覽 <span>Events</span></h4>
+      <div class="cards">
+        <div class="card hero"><div class="when">11/7 週六 · 11:00–16:30 · 免費</div><h5>小黃帽交通安全童樂會</h5>
+          <p>華山 1914 紅磚六合院西 1、西 2、西 5-1 館，<b>交通安全闖關遊戲、小店長制服體驗</b>；西 1 館 11:30 開。</p>
+          <div><span class="badge hot">本週主打</span><span class="badge">闖關</span></div>
+          <a href="https://www.huashan1914.com/exhibition/2026%E5%B0%8F%E9%BB%83%E5%B8%BD%E4%BA%A4%E9%80%9A%E5%AE%89%E5%85%A8%E7%AB%A5%E6%A8%82%E6%9C%83%E3%80%8A%E6%88%90%E7%82%BA%E5%85%A8%E5%AE%B6%E7%9A%84%E5%AE%89%E5%85%A8%E5%B0%8F%E8%8B%B1%E9%9B%84%E3%80%8B" target="_blank" rel="noopener">了解更多 ›</a></div>
+        <div class="card"><div class="when">11/6 – 11/15</div><h5>C MUSICAL 音樂劇《小王子》</h5>
+          <p>臺北表演藝術中心藍盒子，三位演員加三位現場樂手；週末場次與票價以官方公告為準。</p>
+          <a href="https://wekengo.tw/event/5VxUQZ/cmusical-yin-le-ju-xiao-wang-zi" target="_blank" rel="noopener">了解更多 ›</a></div>
+        <div class="card"><div class="when">至 11/8 · 10:00–18:00</div><h5>AHA 原來如此！教科書設計展</h5>
+          <p>松山文創園區台灣設計館，把課本知識做成可以動手玩的裝置；本週日最後一天，費用以官方公告為準。</p>
+          <a href="https://www.songshanculturalpark.org/exhibition/activity/429e79b0-fed3-46f6-850e-47fa04b2ea86" target="_blank" rel="noopener">了解更多 ›</a></div>
+        <div class="card"><div class="when">至 2027/1/3 · 免費</div><h5>從前從前－繪說童話郵票特展</h5>
+          <p>郵政博物館臺北館，童話主題郵票，室內、週一休館；離華山不遠可以排一起。</p>
+          <a href="https://museum.post.gov.tw/post/Postal_Museum/museum/index.jsp?ID=1525402172794&news_no=66650&control_type=page&news_cat=10101&group_name=&news_type=latest_news" target="_blank" rel="noopener">了解更多 ›</a></div>
+      </div></div>
+    <div class="cat"><h4>公園 <span>Parks</span></h4>
+      <div class="cards">
+        <div class="card"><div class="when">大安 · 共融遊戲場</div><h5>大安森林公園</h5><p>共融遊戲場有溜滑梯、沙坑、攀爬網，草地大可以跑；捷運大安森林公園站直達。常設景點。</p></div>
+        <div class="card"><div class="when">萬華 · 滑步車</div><h5>青年公園</h5><p>園區大、步道平，滑步車、跑步都好，還有兒童遊戲場；常設景點。</p></div>
+        <div class="card"><div class="when">中正 · 跑步</div><h5>華山大草原</h5><p>小黃帽童樂會闖關完，旁邊草原直接放電；常設景點。</p></div>
+      </div></div>
+    <div class="cat"><h4>親子住宿 <span>Stay</span></h4>
+      <div class="cards">
+        <div class="card"><div class="when">士林 · 配《小王子》</div><h5>圓山大飯店</h5><p>離臺北表演藝術中心近，看完午場音樂劇入住；建築本身就像參觀景點。</p></div>
+        <div class="card"><div class="when">中山 · 室內放電</div><h5>台北萬豪酒店</h5><p>房客可用室內兒童遊戲與泳池設施，下雨天也有得玩。設施以官方公告為準。</p></div>
+        <div class="card"><div class="when">北投 · 溫泉</div><h5>大地酒店</h5><p>大眾風呂與湯屋，下週冷空氣報到前先泡一次。</p></div>
+      </div></div>
+    <div class="cat"><h4>季節景點 <span>Season</span></h4>
+      <div class="cards">
+        <div class="card"><div class="when">11 月盛期 · 士林</div><h5>陽明山擎天崗芒草</h5><p>芒花還在最滿的時候，大草原步道寬；山上有季風，外套一定要帶。</p>
+          <a href="https://gofunit.com/%E5%85%A8%E5%8F%B0%E8%8A%92%E8%8D%89%E5%AD%A3%E6%99%AF%E9%BB%9E/" target="_blank" rel="noopener">了解更多 ›</a></div>
+        <div class="card"><div class="when">秋冬候鳥 · 北投</div><h5>關渡自然公園</h5><p>候鳥陸續到台北過冬，室內賞鳥區有望遠鏡，小孩也看得到；門票以官方公告為準。</p></div>
+        <div class="card"><div class="when">秋季 · 內湖</div><h5>大湖公園</h5><p>湖畔步道與錦帶橋，秋天散步舒服；落羽松要到更冷時才轉紅。常設景點。</p></div>
+      </div></div>
+  </div>
+
+  <!-- 苗栗 -->
+  <div class="region" id="p4">
+    <div class="cat"><h4>活動・展覽 <span>Events</span></h4>
+      <div class="cards">
+        <div class="card hero"><div class="when">11/6 – 11/8 · 放飛免費</div><h5>苗栗風箏文化暨客家美食節</h5>
+          <p>苗栗市後龍溪河濱公園。<b>風箏彩繪 DIY 11/7、11/8 10:00–16:00（限量）</b>、親子免費放飛、親子園遊車；美食嘉年華 11/7 10:00–20:30、11/8 10:00–17:00；11/7 晚上夜光風箏。租風箏需押金，200 元消費券換限量紀念風箏。</p>
+          <div><span class="badge hot">本週主打</span><span class="badge">免費接駁</span></div>
+          <a href="https://udn.com/news/story/7266/9828984" target="_blank" rel="noopener">了解更多 ›</a></div>
+        <div class="card"><div class="when">11/8 週日 · 09:00–15:00</div><h5>香芋銅鑼庄產業文化活動</h5>
+          <p>銅鑼鄉中平集會所，闖關遊戲、芋泥 DIY、下田採芋（免費、限 500 人需報名）；銅鑼火車站 08:30 起免費接駁。</p>
+          <a href="https://www.miaoli.gov.tw/News_Content2.aspx?n=285&s=1006027" target="_blank" rel="noopener">了解更多 ›</a></div>
+        <div class="card"><div class="when">至 11/30</div><h5>西湖渡假村 秋季優惠</h5>
+          <p>門票 399 元，12 歲以下免費（需一位成人購票），園區有遊樂設施與大草坪；以官方公告為準。</p>
+          <a href="https://pinje1225.pixnet.net/blog/posts/8230022556" target="_blank" rel="noopener">了解更多 ›</a></div>
+        <div class="card"><div class="when">至 2027/1/3</div><h5>2026 苗栗陶藝術節</h5>
+          <p>苗栗陶瓷農創園區，上週開幕，展期長；親子彩繪陶等體驗場次與材料費以官方公告為準。</p>
+          <a href="https://n.yam.com/Article/20261021173119" target="_blank" rel="noopener">了解更多 ›</a></div>
+      </div></div>
+    <div class="cat"><h4>公園 <span>Parks</span></h4>
+      <div class="cards">
+        <div class="card"><div class="when">竹南 · 溜滑梯・跑步</div><h5>竹南運動公園</h5><p>大草地、跑道與兒童遊戲區，從竹北過去很近；常設景點。</p></div>
+        <div class="card"><div class="when">苗栗市 · 散步</div><h5>功維敘隧道</h5><p>老鐵道隧道改成的步道，平坦好走，隧道裡有燈光；常設景點。</p></div>
+        <div class="card"><div class="when">通霄 · 步道・看海</div><h5>虎頭山公園</h5><p>步道不長，山頂可以看海和通霄市區；季風天山頂風大。常設景點。</p></div>
+      </div></div>
+    <div class="cat"><h4>親子住宿 <span>Stay</span></h4>
+      <div class="cards">
+        <div class="card"><div class="when">竹南 · 配風箏節</div><h5>馥藝金鬱金香酒店</h5><p>部分親子房附溜滑梯、B1 童樂屋與泳池；週六晚上看夜光風箏後不用趕回家。</p></div>
+        <div class="card"><div class="when">頭份 · 室內樂園</div><h5>尚順君樂飯店</h5><p>直通尚順育樂世界，下雨或風太大時的室內備案；部分設施有身高限制。</p></div>
+        <div class="card"><div class="when">泰安 · 溫泉</div><h5>觀止溫泉會館</h5><p>泳裝區與私人湯屋，冷空氣來前先泡；非專門親子設施。</p></div>
+      </div></div>
+    <div class="cat"><h4>季節景點 <span>Season</span></h4>
+      <div class="cards">
+        <div class="card"><div class="when">11 月花期 · 銅鑼</div><h5>九湖杭菊</h5><p>白色杭菊田在 11 月開成一片，下週還有杭菊芋頭節；花況以當地公告為準。</p></div>
+        <div class="card"><div class="when">季風季 · 苗栗市</div><h5>後龍溪河濱放風箏</h5><p>風箏節過後河濱草地依然好放，自己帶風箏來；常設景點。</p></div>
+        <div class="card"><div class="when">秋末 · 大湖</div><h5>草莓季準備中</h5><p>草莓多半 12 月後才穩定開園，這時可先看農場整地育苗；開放採果以各農場公告為準。</p></div>
+      </div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide">
+<div class="wrap">
+  <p class="kicker">下週預告 · 11/14 – 11/15</p>
+  <h2 class="big">One more <span class="grad">weekend.</span></h2>
+  <div class="next">
+    <div class="card"><div class="when">新竹 · 11/14 – 11/15</div><h5>玉米雞劇團《神探小紅帽──消失的△》</h5><p>新竹縣文化局實驗劇場，10:30、14:30，800 元（OPENTIX），官方建議 5 歲以上。</p></div>
+    <div class="card"><div class="when">桃園 · 11/14 週六</div><h5>銀河谷音劇團《屁屁偵探》</h5><p>桃園展演中心展演廳，10:30、14:30，約 85 分鐘，500–1,800 元，全場互動，熱門建議先買票。</p></div>
+    <div class="card"><div class="when">台北 · 11/13 – 11/15 · 免費</div><h5>科教館 科學嘉年華</h5><p>臺灣科學節壓軸，科教館一樓廣場與臺北科學藝術園區，攤位多、免費參加。</p></div>
+    <div class="card"><div class="when">苗栗 · 11/14 – 11/15</div><h5>銅鑼杭菊芋頭節「菊祥如芋」</h5><p>杭菊花期正好，時間與活動內容以苗栗縣政府公告為準。</p></div>
+    <div class="card"><div class="when">新竹 · 11/14 – 11/15</div><h5>竹風好市集「日韓連線」</h5><p>東門城護城河畔，吃吃逛逛，配新竹公園一起排。</p></div>
+    <div class="card"><div class="when">桃園 · 11/14 – 11/15</div><h5>小人國 雙 11 優惠第二週</h5><p>本週沒去的話，下週還有一次；條件以官方公告為準。</p></div>
+  </div>
+</div>
+</section>
+
+<footer>
+<div class="wrap">
+  <p>資料來源 · 2026-11-06 查詢。時間與費用以官方公告為準。每週五早上自動更新。</p>
+  <ul>
+    <li><a href="https://wekengo.tw/city/hsinchu/weekend" target="_blank" rel="noopener">WeKenGo 新竹週末活動</a></li>
+    <li><a href="https://wekengo.tw/city/taoyuan/weekend" target="_blank" rel="noopener">WeKenGo 桃園週末活動</a></li>
+    <li><a href="https://wekengo.tw/city/taipei/weekend" target="_blank" rel="noopener">WeKenGo 台北週末活動</a></li>
+    <li><a href="https://wekengo.tw/city/miaoli/weekend" target="_blank" rel="noopener">WeKenGo 苗栗週末活動</a></li>
+    <li><a href="https://www.linego.me/news/6794" target="_blank" rel="noopener">LINE GO：新竹本週活動 11/2–11/8</a></li>
+    <li><a href="https://www.linego.me/news/6793" target="_blank" rel="noopener">LINE GO：桃園本週活動 11/2–11/8</a></li>
+    <li><a href="https://www.linego.me/news/6783" target="_blank" rel="noopener">LINE GO：台北本週活動 11/2–11/8</a></li>
+    <li><a href="https://www.linego.me/news/6801" target="_blank" rel="noopener">LINE GO：苗栗本週活動</a></li>
+    <li><a href="https://udn.com/news/story/7266/9828984" target="_blank" rel="noopener">聯合報：苗栗風箏節 11/6–11/8</a></li>
+    <li><a href="https://www.cna.com.tw/news/aloc/202610210307.aspx" target="_blank" rel="noopener">中央社：苗栗風箏節延期</a></li>
+    <li><a href="https://n.yam.com/Article/20261104581036" target="_blank" rel="noopener">蕃新聞：橫山社會福利市集</a></li>
+    <li><a href="https://www.huashan1914.com/" target="_blank" rel="noopener">華山 1914 文化創意產業園區</a></li>
+    <li><a href="https://www.afmc.gov.tw/" target="_blank" rel="noopener">桃園展演中心</a></li>
+    <li><a href="https://pinje1225.pixnet.net/blog/posts/8230022556" target="_blank" rel="noopener">11–12 月活動樂園優惠彙整（11/4 更新）</a></li>
+    <li><a href="https://www.parenting.com.tw/article/6002726" target="_blank" rel="noopener">親子天下：2026 年 11 月全台親子活動</a></li>
+    <li><a href="https://www.ettoday.net/news/20261106/3267239.htm" target="_blank" rel="noopener">ETtoday：週末天氣（11/6）</a></li>
+    <li><a href="https://www.nownews.com/news/6889701" target="_blank" rel="noopener">NOWnews：11/6 天氣預報</a></li>
+    <li><a href="https://supertaste.tvbs.com.tw/travel/305435" target="_blank" rel="noopener">食尚玩家：新埔柿餅</a></li>
+    <li><a href="https://gofunit.com/%E5%85%A8%E5%8F%B0%E8%8A%92%E8%8D%89%E5%AD%A3%E6%99%AF%E9%BB%9E/" target="_blank" rel="noopener">好好玩：全台芒草季景點</a></li>
+  </ul>
+</div>
+</footer>
+</body>
+</html>
